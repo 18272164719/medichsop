@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    db1:
+      url: jdbc:mysql://192.168.11.200:3306/client?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+    db2:
+      url: jdbc:mysql://192.168.11.200:3306/client1?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+
+  aop:
+    proxy-target-class: true
+  application:
+    name: medicshop
+  redis:
+    host: 192.168.11.200
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 8
+        max-wait: 1000
+        min-idle: 0
+
+
+
+mybatis-plus:
+  type-aliases-package: com.shyl.medicshopclient.dao
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+logging:
+  level:
+      com.shyl.medicshopclient.dao: debug

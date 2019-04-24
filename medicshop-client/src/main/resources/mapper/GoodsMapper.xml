@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shyl.medicshopclient.dao.GoodsMapper" >
+
+
+    <!--<select id="selectPage" resultType="com.shyl.medicshopclient.entity.Goods" >
+        SELECT * FROM b_goods
+    </select>-->
+
+    <update id="update" parameterType="String">
+        update b_goods set name = #{name} where code = #{code}
+    </update>
+</mapper>

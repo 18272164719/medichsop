@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    db1:
+      url: jdbc:sqlserver://10.25.212.83:1555;databasename=kinglogygy
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      username: sa
+      password: 321
+
+  aop:
+    proxy-target-class: true
+  application:
+    name: medicshop
+
+mybatis-plus:
+  type-aliases-package: com.shyl.medicshopclient.dao
+  mapper-locations: classpath:/mapper/*Mapper.xml
