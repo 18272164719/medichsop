@@ -47,7 +47,7 @@ public class FindDirsFiles extends RecursiveAction{
 
         //用一个fork/join pool 实现任务总调度
         ForkJoinPool pool = new ForkJoinPool();
-        FindDirsFiles task = new FindDirsFiles(new File("F:/"),"kafka");
+        FindDirsFiles task = new FindDirsFiles(new File("F:/"),"cloud");
 
         pool.execute(task);
         task.join();
